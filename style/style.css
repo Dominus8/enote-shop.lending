@@ -11,6 +11,10 @@ a:hover {
   padding-bottom: 10px;
 }
 
+h1 {
+  font-size: 3vw;
+}
+
 .market-links {
   height: 50px;
   margin-bottom: 10px;
@@ -69,6 +73,9 @@ a:hover {
   vertical-align: bottom;
 }
 
+.single-page-price-product {
+  min-width: 240px;
+}
 .single-page-price-product .single-page-price-product__card {
   margin: 0 auto;
   padding: 10px 20px;
