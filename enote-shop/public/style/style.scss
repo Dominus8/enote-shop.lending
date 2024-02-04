@@ -32,7 +32,7 @@ h1{
 .market-links{
     height: 50px;
     margin-bottom: 10px;
-    
+
 }
 .top-banner{
     max-width: 100%;
@@ -126,5 +126,38 @@ margin-top: 15px;
         padding:5px 15px;
         border-radius: 5px;
         box-shadow: 3px 1px 3px rgba(0, 0, 0, 0.111);
+    }
+}
+
+//-Админка
+.admin-main-content{
+height: 100vh;
+.admin-left-sitebar{
+    padding: 0;
+    margin-top: -10px;
+        background-color: #062240;
+        border: solid 1px black;
+        .admin-menu{
+            margin: 0!important;
+            text-align: right;
+            margin: 10px;
+            .admin-menu-element{
+
+                padding: 10px;
+                color: rgba(245, 245, 220, 0.753);
+                display: flex;
+                align-items: center;
+                i{
+                    margin-right: 7px;
+                }
+                &:hover{
+                    cursor: pointer;
+                    color: #fff;
+                }
+            }
+        }
+    }
+    .admin-content-wrapper{
+        text-align-last: left;
     }
 }

@@ -1,46 +1,5 @@
-<!DOCTYPE html>
-<html lang="ru">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css">
-    <link rel="stylesheet" href="/style/normalize.css">
-    <link rel="stylesheet" href="/style/style.css">
-    <title>Купить корпус для жёсткого диска 2.5"</title>
-    <meta name="description" content="
-    Купить корпус для жёсткого диска от ноутбука 2.5''.
-    Честный USB 3.0. Провод и чехол в комплекте.
-    Высокое качество по хорошей цене.
-    На любом маркетплейсе.
-    "/>
-</head>
-<style>
-
-</style>
-<body>
-    <div class="container text-center">
-        <div class="row">
-          <div class="col">
-            <div class="row">
-                <nav class="navbar fixed-top bg-secondary-subtle">
-                    <div class="container">
-                        <a target="_blank" class="navbar-brand" href="/">
-                            <img src="/images/logo_header.svg" alt="Logo" width="40" height="40" > <!--class="d-inline-block align-text-top" -->
-                            E-shop
-                          </a>
-                        <div class="contacts ">
-                            <div class="">8-499-350-26-08</div>
-                            <div class="">info@enote-shop.ru</div>
-                        </div>
-                    </div>
-                </nav>
-            </div>
-            <div class="row content-wrapper">
+@extends('master')
+@section('content')
                 <div class="col-0 left-sitebar">
 
                 </div>
@@ -170,17 +129,4 @@
                     </div>
                 </div>
             </div>
-            <div class="row">
-
-            </div>
-          </div>
-        </div>
-      </div>
-</body>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
-
-<script src="https://res.smartwidgets.ru/app.js" defer></script>
-<script src="/js/mine.js"></script>
-
-</html>
+@endsection

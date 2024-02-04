@@ -106,4 +106,36 @@ h1 {
   padding: 5px 15px;
   border-radius: 5px;
   box-shadow: 3px 1px 3px rgba(0, 0, 0, 0.111);
+}
+
+.admin-main-content {
+  height: 100vh;
+}
+.admin-main-content .admin-left-sitebar {
+  padding: 0;
+  margin-top: -10px;
+  background-color: #062240;
+  border: solid 1px black;
+}
+.admin-main-content .admin-left-sitebar .admin-menu {
+  margin: 0 !important;
+  text-align: right;
+  margin: 10px;
+}
+.admin-main-content .admin-left-sitebar .admin-menu .admin-menu-element {
+  padding: 10px;
+  color: rgba(245, 245, 220, 0.753);
+  display: flex;
+  align-items: center;
+}
+.admin-main-content .admin-left-sitebar .admin-menu .admin-menu-element i {
+  margin-right: 7px;
+}
+.admin-main-content .admin-left-sitebar .admin-menu .admin-menu-element:hover {
+  cursor: pointer;
+  color: #fff;
+}
+.admin-main-content .admin-content-wrapper {
+  -moz-text-align-last: left;
+       text-align-last: left;
 }/*# sourceMappingURL=style.css.map */
