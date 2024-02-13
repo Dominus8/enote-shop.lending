@@ -24,8 +24,8 @@ class MainController extends Controller
     public function admin_main_data() {
         return view('admin_main_data');
     }
-    public function admin_product() {
-        $category = Category::all();
+    public function admin_product(Request $request) {
+            $category = Category::all()->where('domain', $request->getHttpHost());
         return view('admin_product',['category'=>$category]);
     }
     public function admin_extra() {
@@ -35,6 +35,7 @@ class MainController extends Controller
     //- Добавление категории
     public function add_category(Request $request) {
         $category = new Category;
+        $category->domain = $request->getHttpHost();
         $category->category_name = $request->input('category_name');
         $category->save();
         return redirect()->route('admin_product');

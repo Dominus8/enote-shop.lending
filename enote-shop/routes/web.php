@@ -39,7 +39,26 @@ Route::post('/add_category', [MainController::class, 'add_category'])->name('add
 Route::post('/category_edit/{id}', [MainController::class, 'category_edit'])->name('category_edit');
 
 //- удаление категории
-Route::get('/category_remote/{id}', [MainController::class, 'category_remote'])->name('category_remote');
+Route::get('/category_remove/{id}', [MainController::class, 'category_remove'])->name('category_remove');
 
+//---------------------------------Работа с продуктами
 
+//- Страница добавления продукта
 
+Route::post('/produpt_add', [MainController::class, 'produpt_add'])->name('produpt_add');
+
+//- Добавление продукта
+
+Route::post('/product_save', [MainController::class, 'product_save'])->name('product_save');
+
+//- Изменение продукта
+
+Route::post('/product_edit/{id}', [MainController::class, 'product_edit'])->name('product_edit');
+
+//- Удаление продукта
+
+Route::get('/product_remote/{id}', [MainController::class, 'product_remove'])->name('product_remove');
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
