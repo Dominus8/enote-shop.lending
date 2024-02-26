@@ -92,6 +92,7 @@ h1 {
 .single-page-price-product .single-page-price-product__card .single-page-price-product__el:hover {
   box-shadow: 0 0 0 2px white, 0 0 0 4px #1b538f;
   background-color: rgba(122, 127, 133, 0.07);
+  border: none;
 }
 .single-page-price-product .single-page-price-product__card .single-page-price-product__el .single-page-price-product__el-link {
   display: flex;

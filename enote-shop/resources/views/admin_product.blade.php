@@ -65,46 +65,18 @@
         @endforeach
     </div>
 
-    {{-- Управление продуктами --}}
-    <div class="product-management">
+{{-- Управление товарами --}}
 
-        <button type="button" class="btn btn-secondary">Добавить продукт</button>
-        <div class="product-list">
-            <div class="product">
-                <div class="product_image">
-                    <img src="" alt="">
-                </div>
-                <div class="product_title">
-                    Название продукта
-                </div>
-                <div class="product_buttons">
-                    <a href="route('product_remove')" type="button" class="btn btn-primary">изменить</a>
-                    {{-- <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#dellCat{{$el->id}}">удалить</button> --}}
-                </div>
-                    {{-- Модалка удаления продуктам --}}
-                    {{-- {{-- <div class="modal fade" id="dellCat{{$el->id}}" tabindex="-1" role="dialog" aria-labelledby="dellCat{{$el->id}}Title" aria-hidden="true"> --}} --}}
-                        <div class="modal-dialog modal-dialog-centered" role="document">
-                        <div class="modal-content">
-                            <div class="modal-header">
-                            <h5 class="modal-title" id="exampleModalLongTitle">Modal title</h5>
-                            <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
-                                <span aria-hidden="true">&times;</span>
-                            </button>
-                            </div>
-                            <div class="modal-body">
-                            {{-- Удалить продукт {{$el->category_name}}?<br> --}}
-                            Все товары из этой категории попадут в Общие.
-                            </div>
-                            <div class="modal-footer">
-                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Отмена</button>
-                            {{-- <a href="/product_remove/{{$el->id}}" type="button" class="btn btn-primary">Удалить</a> --}}
-                            </div>
-                        </div>
-                        </div>
-                    </div>
-                  {{-- Конец модалки удаления продукта --}}
-            </div>
-        </div>
+    <div class="product-managment">
+
+        <h3>Управление товарами</h3>
+
+        <a href="{{ route('produpt_add') }}" class="btn btn-primary">Создать товар</a>
+    </div>
+    <div class="product_list">
+        @foreach($products as $el)
+            <p>{{$el->product_slug}}&nbsp{{$el->id}}&nbsp<button type="button" class="btn btn-primary">изменить</button><a href="/product_remove/{{$el->id}}" type="button" class="btn btn-primary">удалить</a></p>
+        @endforeach
     </div>
 
 </div>

@@ -21,6 +21,11 @@ Route::get('/', [MainController::class, 'index'])->name('index');
 // - отображение товара
 Route::get('/product', [MainController::class, 'product'])->name('product');
 
+
+//--------------------------------- Админка
+
+Route::middleware('auth')->group(function () {
+
 //-переходы по админке
 Route::get('/admin', [MainController::class, 'admin'])->name('admin');
 
@@ -30,34 +35,37 @@ Route::get('/admin_product', [MainController::class, 'admin_product'])->name('ad
 
 Route::get('/admin_extra', [MainController::class, 'admin_extra'])->name('admin_extra');
 
+
 //---------------------------------Работа с категориями
 
-//- Добавление категории
-Route::post('/add_category', [MainController::class, 'add_category'])->name('add_category');
+    //- Добавление категории
+    Route::post('/add_category', [MainController::class, 'add_category'])->name('add_category');
 
-//- Изменение названия категории
-Route::post('/category_edit/{id}', [MainController::class, 'category_edit'])->name('category_edit');
+    //- Изменение названия категории
+    Route::post('/category_edit/{id}', [MainController::class, 'category_edit'])->name('category_edit');
 
-//- удаление категории
-Route::get('/category_remove/{id}', [MainController::class, 'category_remove'])->name('category_remove');
+    //- удаление категории
+    Route::get('/category_remove/{id}', [MainController::class, 'category_remove'])->name('category_remove');
 
-//---------------------------------Работа с продуктами
+    //---------------------------------Работа с продуктами
 
-//- Страница добавления продукта
+    //- Страница добавления продукта
 
-Route::post('/produpt_add', [MainController::class, 'produpt_add'])->name('produpt_add');
+    Route::get('/produpt_add', [MainController::class, 'admin_product_add'])->name('produpt_add');
 
-//- Добавление продукта
+    //- Добавление продукта
 
-Route::post('/product_save', [MainController::class, 'product_save'])->name('product_save');
+    Route::post('/product_save', [MainController::class, 'admin_product_save'])->name('product_save');
 
-//- Изменение продукта
+    //- Изменение продукта
 
-Route::post('/product_edit/{id}', [MainController::class, 'product_edit'])->name('product_edit');
+    Route::post('/product_edit/{id}', [MainController::class, 'product_edit'])->name('product_edit');
 
-//- Удаление продукта
+    //- Удаление продукта
 
-Route::get('/product_remote/{id}', [MainController::class, 'product_remove'])->name('product_remove');
+    Route::get('/product_remove/{id}', [MainController::class, 'product_remove'])->name('product_remove');
+
+});
 
 Auth::routes();
 
