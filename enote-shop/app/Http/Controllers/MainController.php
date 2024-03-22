@@ -84,10 +84,8 @@ class MainController extends Controller
 
         $arr=array();
 
-
         foreach($image as $img){
-
-            $x=$img->store('storage', 'product');
+            $x=$img->store('public');
             array_push($arr,$x);
         }
 
@@ -131,6 +129,16 @@ class MainController extends Controller
     //--Удаление продукта
 
     public function product_remove($id){
+
+        $image = Product::find($id)->product_images;
+        // dd($image);
+
+        foreach($image as $img){
+
+            Storage::disk('public')->delete($img);
+
+        }
+
         $product = Product::find($id);
         $product->delete();
         return redirect()->route('admin_product');
